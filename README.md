@@ -15,7 +15,7 @@ Given an address, the weather data will be shown. The weather data is cached by 
 ### How to run the test suite:
 * `chromedriver # start the headless webdriver`
 * `rails test:all # run all tests (system and unit)`
-* `rspec` # run rspec unit tests
+* `rspec # run rspec unit tests`
 
 ### How to use the app:
 * Open `http://localhost:3000/` to access the address form
