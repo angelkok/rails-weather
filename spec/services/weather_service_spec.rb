@@ -1,6 +1,5 @@
 require 'rails_helper'
 require 'webmock/rspec'
-require 'pry'
 
 RSpec.describe WeatherService, type: :model do
 

@@ -1,6 +1,5 @@
 # spec/models/address_spec.rb
 require 'rails_helper'
-require 'pry'
 
 RSpec.describe Address, type: :model do
 
