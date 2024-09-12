@@ -1,0 +1,39 @@
+<div class="container">
+	<h3>Weather for <%= @address.street %></h3>
+
+	<table class="highlight centered">
+		<thead>
+			<tr>
+				<th>Date</th>
+				<th>Weather</th>
+				<th>Wind</th>
+				<th>Low Temperature (°C)</th>
+				<th>High Temperature (°C)</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<% @highs_and_lows.each do |date, forecast| %>
+				<tr>
+					<td><%= date %></td>
+					<td><%= forecast[:weather].first["description"] %></td>
+					<td><%= forecast[:wind]["speed"] %></td>
+					<td><%= forecast[:low] %> °C</td>
+					<td><%= forecast[:high] %> °C</td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+	<br>
+	<div>This data was retrieved from the
+	<% if @cached %>
+		Rails Cache.
+	<% else %>
+		OpenWeahter API.
+	<% end %>
+	</div>
+
+	<br>
+
+	<%= link_to 'Back', root_path %>
+</div>

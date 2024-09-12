@@ -1,0 +1,14 @@
+<h1>Weather</h1>
+<%= form_with url: weather_show_path, method: :post, local: true do %>
+    Enter address:
+	<div>
+		<div><label for="street">Street:</label><%= text_field_tag :street %></div>
+		<div><label for="city">City:</label><%= text_field_tag :city %></div>
+		<div><label for="state">State:</label><%= text_field_tag :state %></div>
+		<div><label for="zip">Zip:</label><%= text_field_tag :zip %></div>
+	</div>
+
+	<div>
+		<%= submit_tag "Get Weather" %>
+	</div>
+<% end %>
