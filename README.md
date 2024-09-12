@@ -3,7 +3,7 @@ Ruby on Rails application demonstrating weather API calls and caching.
 
 Given an address, the weather data will be shown. The weather data is cached by zip code. UI will indicate when the cached data is used.
 
-### Requirements:
+### Requirements: ([docs](./docs/requirements.txt))
 * Google geolocation API key
 * OpenWeather API key
 * Caching - Using in-memory caching - No Redis dependency
@@ -21,7 +21,22 @@ Given an address, the weather data will be shown. The weather data is cached by 
 * Submit the form with your address
 * A page with the weather data will be displayed
 
-### Issues:
+
+### What it looks like
+Address form:
+
+![Weather form](./docs/img/weather-index.png)
+
+Displaying weather date from OpenWeather API
+
+![Displaying the forecast](./docs/img/weather-show.png)
+
+Displaying the cached data
+
+![Displaying the forecast with cached data](./docs/img/weather-show-cache.png)
+
+
+### Environment Setup Issues:
 This app was developed on Windows 10 WSL2 (Debian), requiring customizations that are generally not needed an OSX machine. 
 
 Aside from the development environment setup, WSL2 needs a separate chromedriver for headless/integration testing, and the relevant configuration in the `aplication_system_test_case.rb`.
