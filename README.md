@@ -4,7 +4,11 @@ Ruby on Rails application demonstrating weather API calls and caching.
 Given an address, the weather data will be shown. The weather data is cached by zip code. UI will indicate when the cached data is used.
 
 ### Requirements: ([docs](./docs/requirements.txt))
-* Google geolocation API key
+* Google geolocation API key 
+    * Place in `.env` like so:
+    ```
+    OPENWEATHER_API_KEY=<KEY>
+    ```
 * OpenWeather API key
 * Caching - Using in-memory caching - No Redis dependency
 * Chromedriver (when on WSL2, see [issues](#markdown-header-issues))
